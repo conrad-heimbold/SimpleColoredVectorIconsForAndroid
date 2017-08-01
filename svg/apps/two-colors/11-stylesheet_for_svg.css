@@ -1,0 +1,383 @@
+/* test */
+svg                                       { margin-left:auto; 
+                                            margin-right:auto; 
+                                            display:block; 
+                                            margin-top:20%; 
+                                            margin-bottom:20%; 
+                           		    background-color:white; }
+rect 					  { border-radius:2px !important}
+.background			          { -webkit-filter: drop-shadow(1.5px 1.5px 3px #111);
+            					    filter: drop-shadow(1.5px 1.5px 3px #111);}
+/*	.apktrack                         { background-color:#888888 }*/
+.acrobat			          { background-color:#000000 }
+.a2048				          { background-color:#000000 }
+
+.a2048__background		          { fill:#bbada0 !important }
+.a2048__foreground		          { fill:#f2b179 !important }
+.acrobat__background		          { fill:#f20c0c !important }
+.acrobat__foreground		          { fill:#ffffff !important }
+.adaway__background 		          { fill:#b71c1c !important }
+.adaway__foreground 		          { fill:#ffffff !important }
+.afwall__background 		          { fill:#0f9d58 !important }
+.afwall__foreground 		          { fill:#ffffff !important }
+.alarmklock__background 	          { fill:#ffd201 !important }
+.alarmklock__foreground 	          { fill:#f97615 !important }
+.android__background 		          { fill:#a4c639 !important }
+.android__foreground 		          { fill:#ffffff !important }
+.an2linux__background 		          { fill:#ffffff !important }
+.an2linux__foreground 		          { fill:#000000 !important }
+.android_provisioning__background         { fill:#ff5722 !important }
+.android_provisioning__foreground         { fill:#ffffff !important }
+.androidrun__background 	          { fill:#1c0162 !important }
+.androidrun__foreground 	          { fill:#dafc1f !important }
+.ankidroid__background 		          { fill:#545859 !important }
+.ankidroid__foreground 		          { fill:#189dde !important }
+.antox__background 		          { fill:#231f20 !important }
+.antox__foreground 		          { fill:#ffffff !important }
+.apex__background 		          { fill:#4e8df4 !important }
+.apex__foreground 		          { fill:#ffffff !important }
+.apktrack__background 		          { fill:#009ca7 !important }
+.apktrack__foreground 		          { fill:#aeea00 !important } /* 5bbf00 */
+/*
+.keyboard_dark                            { fill:#5c5c5c !important }
+.keyboard_light                           { fill:#c0c0c0 !important }
+.aosp_keyboard_blue                       { fill:#18c2d8 !important }
+.anysoft_keyboard_purple                  { fill:#663399 !important }
+*/
+.aosp_keyboard__background 	          { fill:#5c5c5c !important }
+.aosp_keyboard__foreground 	          { fill:#c0c0c0 !important }
+.anysoft_keyboard__background 	          { fill:#663399 !important } 
+.anysoft_keyboard__foreground 	          { fill:#c0c0c0 !important }
+.atomic__background 		          { fill:#89c149 !important }
+.atomic__foreground 		          { fill:#ffffff !important }
+.audinaut__background 		          { fill:#3f3f3f !important }
+.audinaut__foreground 		          { fill:#fe4732 !important }
+.bandcamp__background 		          { fill:#f2f2f2 !important }
+.bandcamp__foreground 		          { fill:#0fadd9 !important }
+.batterylive__background                  { fill:#f68496 !important }
+.batterylive__foreground                  { fill:#ffffff !important }
+.bible__background 		          { fill:#454545 !important }
+.bible__foreground 		          { fill:#f5ca1f !important }
+.blueminimal__background 	          { fill:#2196f3 !important }
+.blueminimal__foreground 	          { fill:#ffffff !important }
+.bluetooth__background 		          { fill:#3f70d8 !important }
+.bluetooth__foreground 		          { fill:#ffffff !important }
+.boinc__background 		          { fill:#175091 !important }
+.boinc__foreground 		          { fill:#f6ba23 !important }
+.chrome__background 		          { fill:#4b8bf5 !important }
+.chrome__foreground 		          { fill:#ffffff !important }
+.clock__background 		          { fill:#5e6cb7 !important }
+.clock__foreground 		          { fill:#ffffff !important }
+.cmbugreport__background 	          { fill:#d43232 !important }
+.cmbugreport__foreground 	          { fill:#ffffff !important }
+.contacts__background                     { fill:#ffffff !important }
+.contacts__foreground                     { fill:#000000 !important }
+.conversations__background 	          { fill:#00a000 !important }
+.conversations__foreground 	          { fill:#aaffaa !important }
+.cpuz__background 		          { fill:#432385 !important }
+.cpuz__foreground 		          { fill:#ffffff !important }
+.cyanogenmodsystem__background 	          { fill:#33b5e5 !important }
+.cyanogenmodsystem__foreground 	          { fill:#ffffff !important }
+.cyanogenmod_trebuchet__background        { fill:#0097ca !important }
+.cyanogenmod_trebuchet__foreground        { fill:#ffffff !important }
+.cyanogenmod_wallpapers__background       { fill:#455b65 !important }
+.cyanogenmod_wallpapers__foreground       { fill:#03b0e4 !important }
+.diaspora__background 		          { fill:#207be6 !important }
+.diaspora__foreground 		          { fill:#ffffff !important }
+.dicer__background 		          { fill:#ffffff !important }
+.dicer__foreground 		          { fill:#eb2121 !important }
+.downloads__background 		          { fill:#0EADF5 !important }
+.downloads__foreground 		          { fill:#ffffff !important }
+.dropbox__background 		          { fill:#0070e0 !important }
+.dropbox__foreground 		          { fill:#ffffff !important }
+.duckduckgo__background                   { fill:#de5833 !important }
+.duckduckgo__foreground                   { fill:#ffffff !important } /* fdd20a */
+.etar__background 		          { fill:#f9f9f9 !important }  
+.etar__foreground 		          { fill:#3f3f3f !important } /* 4dc7b6 */
+.etesync__background 		          { fill:#ffd740 !important }
+.etesync__foreground 		          { fill:#4085fa !important }
+.facebook__background 		          { fill:#4b67a0 !important }
+.facebook__foreground 		          { fill:#ffffff !important }
+.fdroid__background                       { fill:#1976d2 !important }
+.fdroid__foreground                       { fill:#aeea00 !important }
+.fdroid_simple__background 	          { fill:#aeea00 !important } 
+.fdroid_simple__foreground 	          { fill:#1976d2 !important }
+.fdroid__background 		          { fill:#1976d2 !important } 
+.fdroid__foreground 		          { fill:#aeea00 !important }
+.firefox__background 		          { fill:#2394bc !important }
+.firefox__foreground 		          { fill:#ec8840 !important }
+.forest__background 		          { fill:#724406 !important }
+.forest__foreground 		          { fill:#8cc914 !important } 
+.forkhub__background 		          { fill:#ffffff !important }
+.forkhub__foreground 		          { fill:#1a237d !important }
+.freeotp__background 		          { fill:#1856f0 !important }
+.freeotp__foreground 		          { fill:#ffffff !important }
+.freeyourgadget__background 	          { fill:#1976d2 !important }
+.freeyourgadget__foreground 	          { fill:#ff9800 !important }
+.geogebra__background 		          { fill:#9999ff !important }
+.geogebra__foreground 		          { fill:#666666 !important }
+.gkeep__background                        { fill:#f5ba14 !important }
+.gkeep__foreground                        { fill:#ffffff !important }
+.gmail__background 		          { fill:#ffffff !important }
+.gmail__foreground 		          { fill:#dc483c !important }
+.gmaps__background 		          { fill:#26b668 !important }
+.gmaps__foreground 		          { fill:#333388 !important }
+.google__background 		          { fill:#ffffff !important }
+.google__foreground 		          { fill:#498af4 !important }
+.icecons__background 		          { fill:#ffffff !important }
+.icecons__foreground 		          { fill:#800080 !important }
+.keepass2android__background 	          { fill:#6e8c1c !important }
+.keepass2android__foreground 	          { fill:#ffffff !important }
+.kiwix__background 		          { fill:#fdfdfd !important }
+.kiwix__foreground 		          { fill:#000000 !important }
+.komoot__background 		          { fill:#80e740 !important }
+.komoot__foreground 		          { fill:#ffffff !important }
+.license__background 		          { fill:#ffffff !important }
+.license__foreground 		          { fill:#000000 !important }
+.lock_clock__background 	          { fill:#000000 !important }
+.lock_clock__foreground 	          { fill:#ffffff !important }
+.mgit__background 		          { fill:#3366cc !important }
+.mgit__foreground 		          { fill:#ffffff !important }
+.money__background 		          { fill:#fecf48 !important }
+.money__foreground 		          { fill:#cc9018 !important }
+.netguard__background 		          { fill:#ff5722 !important }
+.netguard__foreground 		          { fill:#009688 !important }
+.oeffi_directions__background 	          { fill:#f0c40d !important }
+.oeffi_directions__foreground 	          { fill:#40a33f !important }
+.oeffi_plans__background 	          { fill:#f0c40d !important }
+.oeffi_plans__foreground 	          { fill:#40a33f !important }
+.oeffi_stations__background 	          { fill:#f0c40d !important }
+.oeffi_stations__foreground 	          { fill:#40a33f !important }
+.opentasks__background 		          { fill:#009688 !important }
+.opentasks__foreground 		          { fill:#ffffff !important }
+.opera__background 		          { fill:#990012 !important }
+.opera__foreground 		          { fill:#f54545 !important }
+.orbot__background 		          { fill:#4f3663 !important }
+.orbot__foreground 		          { fill:#78af52 !important }
+.oscilloscope__background 	          { fill:#060606 !important }
+.oscilloscope__foreground 	          { fill:#14ff14 !important }
+.owncloud__background 		          { fill:#1d2d44 !important }
+.owncloud__foreground 		          { fill:#ffffff !important }
+.qrforkeepass__background 	          { fill:#6e8c1c !important }
+.qrforkeepass__foreground 	          { fill:#ffffff !important }
+.fmradio__background 		          { fill:#ee4580 !important }
+.fmradio__foreground 		          { fill:#607e8b !important }
+.radiodroid__background 	          { fill:#009587 !important }
+.radiodroid__foreground 	          { fill:#ffffff !important }
+.riot__background 		          { fill:#7dc8a2 !important }
+.riot__foreground 		          { fill:#764d80 !important }
+.seafile__background 		          { fill:#ff9600 !important }
+.seafile__foreground 		          { fill:#ffffff !important }
+.shazam__background                       { fill:#0088ff !important }
+.shazam__foreground                       { fill:#ffffff !important }
+.snapchat__background 		          { fill:#fffc00 !important }
+.snapchat__foreground 		          { fill:#ffffff !important }
+.soundrecorder__background 	          { fill:#dd4e42 !important }
+.soundrecorder__foreground 	          { fill:#ffffff !important }
+.spotify__background 		          { fill:#1ed760 !important }
+.spotify__foreground 		          { fill:#191414 !important }
+.steam__background 		          { fill:#132e62 !important }
+.steam__foreground 		          { fill:#ffffff !important }
+.streetcomplete__background 	          { fill:#7db6d8 !important }
+.streetcomplete__foreground 	          { fill:#f3cc70 !important }
+.swiftkey__background 		          { fill:#329ffb !important }
+.swiftkey__foreground 		          { fill:#ffffff !important }
+.tasks__background 		          { fill:#617e8c !important }
+.tasks__foreground 		          { fill:#ffffff !important }
+.telegram__background 		          { fill:#38afec !important }
+.telegram__foreground 		          { fill:#ffffff !important }
+.termuxfloat__background 	          { fill:#000000 !important }
+.termuxfloat__foreground 	          { fill:#ffffff !important }
+.themes__background 		          { fill:#20C0E5 !important }
+.themes__foreground 		          { fill:#ffffff !important }
+.tinc__background 		          { fill:#424242 !important }
+.tinc__foreground 		          { fill:#ffffff !important }
+.turtl__background 		          { fill:#3f51b5 !important }
+.turtl__foreground 		          { fill:#ffffff !important }
+.twitter__background 		          { fill:#1da1f2 !important }
+.twitter__foreground 		          { fill:#ffffff !important }
+.viber__background 		          { fill:#665cac !important }
+.viber__foreground 		          { fill:#ffffff !important }
+.vlc__background 		          { fill:#ff8800 !important }
+.vlc__foreground 		          { fill:#ffffff !important }
+.whatsapp__background 		          { fill:#42c353 !important }
+.whatsapp__foreground 		          { fill:#ffffff !important }
+.wifianalyzer__background 	          { fill:#2e7d32 !important }
+.wifianalyzer__foreground 	          { fill:#ffffff !important }
+.wifi_keyshare__background 	          { fill:#e2e2e2 !important }
+.wifi_keyshare__foreground 	          { fill:#3f51b5 !important }
+.wikipedia__background 		          { fill:#f6f6f6 !important }
+.wikipedia__foreground 		          { fill:#333333 !important }
+.xabber__background 		          { fill:#ffffff !important }
+.xabber__foreground 		          { fill:#dc3023 !important }
+.zapp__background 		          { fill:#df0079 !important }
+.zapp__foreground 		          { fill:#fdfdfd !important }
+.bubble__background                       { fill:#f8f8f8 !important }
+.bubble__foreground                       { fill:#353e4e !important }
+.kik__background                          { fill:#69D023 !important }
+.kik__foreground                          { fill:#ffffff !important }
+.messages__background                     { fill:#00acc1 !important }
+.messages__foreground                     { fill:#ffffff !important }
+.microchip__background                    { fill:#16b9ba !important }
+.microchip__foreground                    { fill:#2b3e53 !important } /* f0e50a */
+.shazam__background                       { fill:#0088ff !important }
+.shazam__foreground                       { fill:#ffffff !important }
+.gplaystore__background                   { fill:#ffffff !important }
+.gplaystore__foreground                   { fill:#00d4ff !important }
+.flatastic__background                    { fill:#3aa962 !important }
+.flatastic__foreground                    { fill:#ffffff !important }
+.wunderlist__background                   { fill:#f9f4f3 !important }
+.wunderlist__foreground                   { fill:#ee4a2f !important }
+.blablacar__background                    { fill:#ffffff !important }
+.blablacar__foreground                    { fill:#69b64e !important }
+.transport__background                    { fill:#f24236 !important }
+.transport__foreground                    { fill:#ffffff !important }
+.tidal__background                        { fill:#000000 !important }
+.tidal__foreground                        { fill:#ffffff !important }
+.systemappmover__background               { fill:#a4c639 !important }
+.systemappmover__foreground               { fill:#ffffff !important }
+.calculator__background                   { fill:#6a8592 !important }
+.calculator__foreground                   { fill:#24eab8 !important } /* ffffff */
+.blogger__background                      { fill:#f79238 !important }
+.blogger__foreground                      { fill:#ffffff !important }
+.birthdayadapter__background              { fill:#276528 !important }
+.birthdayadapter__foreground              { fill:#ffffff !important }
+.davdroid__background                     { fill:#8bc34a !important }
+.davdroid__foreground                     { fill:#ffffff !important }
+.clashroyale__foreground                  { fill:#F1B82D !important }
+.clashroyale__background                  { fill:#54e5d3 !important } /* FBD097 - skin color */
+.instagram__background                    { fill:#c0368c !important }
+.instagram__foreground                    { fill:#fa9f3e !important } /* ffffff fa9f3e */
+.icsdroid__background                     { fill:#2f80c7 !important } /* 59aadd 3c8cce 2f80c7 61b1e1 */
+.icsdroid__foreground                     { fill:#ffffff !important }
+.su__background                           { fill:#009688 !important }
+.su__foreground                           { fill:#ffffff !important }
+.slidereddit__background                  { fill:#f95301 !important }
+.slidereddit__foreground                  { fill:#3f3f3f !important } /* ffffff */
+.protonmail__background                   { fill:#354b5e !important }
+.protonmail__foreground                   { fill:#ffffff !important }
+.practicehub__background                  { fill:#64a8d5 !important } /* 519ed0 347cab */
+.practicehub__foreground                  { fill:#212121 !important } /* 7b7b7b 8d8d8d */
+.pixeldungeon__background                 { fill:#752c2c !important }
+.pixeldungeon__foreground                 { fill:#d5ab2d !important }
+.openapk__background                      { fill:#7e5c4f !important }
+.openapk__foreground                      { fill:#c0afaa !important }
+.terminal__background                     { fill:#1d1d1d !important } /* 202020 */
+.terminal__foreground                     { fill:#f8f8f8 !important } 
+.dbnavigator__background                  { fill:#de0613 !important }
+.dbnavigator__foreground                  { fill:#ffffff !important }
+.speedtest__background                    { fill:#096879 !important } /* 0c4754 05323e */
+.speedtest__foreground                    { fill:#ffffff !important }
+.runnerup__background                     { fill:#003366 !important }
+.runnerup__foreground                     { fill:#ffffff !important }
+.flipboard__background                    { fill:#e12828 !important }
+.flipboard__foreground                    { fill:#ffffff !important }
+.leafpic__background                      { fill:#6fffdd !important }
+.leafpic__foreground                      { fill:#22b369 !important } /* 22d275 */
+.meinvodafone__background                 { fill:#ff0f1d !important }
+.meinvodafone__foreground                 { fill:#ffffff !important }
+.simplysolid__background                  { fill:#3e50b3 !important }
+.simplysolid__foreground                  { fill:#beac49 !important }
+.calnotify__background                    { fill:#3b83f3 !important }
+.calnotify__foreground                    { fill:#ffffff !important }
+.smsscheduler__background                 { fill:#ffffff !important }
+.smsscheduler__foreground                 { fill:#357ec7 !important }
+.syncthing__background                    { fill:#24b3da !important }
+.syncthing__foreground                    { fill:#ffffff !important }
+.amaze__background                        { fill:#46a7f5 !important }
+.amaze__foreground                        { fill:#ffffff !important }
+.applicationsinfo__background             { fill:#445963 !important }
+.applicationsinfo__foreground             { fill:#cdd6da !important }
+.apps2org__background                     { fill:#cce6fa !important }
+.apps2org__foreground                     { fill:#ffffff !important }
+.audiofx__background                      { fill:#d4d4d4 !important }
+.audiofx__foreground                      { fill:#c84735 !important }
+.calendar__background                     { fill:#d6d6d6 !important } /* 3669d7 */
+.calendar__foreground                     { fill:#da4437 !important } /* ffffff */
+.recorder__background                     { fill:#985943 !important } /* 975943 975842 94543d */ 
+.recorder__foreground                     { fill:#3d3d3d !important } /* 373737 393939 333333 */
+.archwikiviewer__background               { fill:#1793d1 !important }
+.archwikiviewer__foreground               { fill:#ffffff !important }
+.openkeychain__background                 { fill:#94c061 !important } /* 7bad45 */
+.openkeychain__foreground                 { fill:#a3a3a3 !important } /* dbdbdb d3d3d3  */
+.sipcaller__background                    { fill:#f4922f !important } /* f48b22 e2770b */
+.sipcaller__foreground                    { fill:#ffffff !important } 
+.osmand__background                       { fill:#95ba4e !important } /* 9dbe5b 9cbc58 */
+.osmand__foreground                       { fill:#ffaa00 !important }
+.privacyfriendly_shoppinglist__background { fill:#3680bb !important } /* 3680bb -> 1978b5, with shadow*/
+.privacyfriendly_shoppinglist__foreground { fill:#ffffff !important }
+.privacyfriendly_passwordgen__background  { fill:#3680bb !important } /* 3680bb -> 1978b5, with shadow*/
+.privacyfriendly_passwordgen__foreground  { fill:#ffffff !important }
+.openlauncher__background                 { fill:#515151 !important }
+.openlauncher__foreground                 { fill:#1891ca !important } /* cee640 f85322 */
+.newpipe__background                      { fill:#cd201f !important }
+.newpipe__foreground                      { fill:#ffffff !important }
+.yalpstore__background                    { fill:#ffffff !important }
+.yalpstore__foreground                    { fill:#357ec7 !important }
+.simple_draw__background                  { fill:#f68630 !important }
+.simple_draw__foreground                  { fill:#ffffff !important }
+.simple_gallery__background               { fill:#f68630 !important }
+.simple_gallery__foreground               { fill:#ffffff !important }
+.simple_applauncher__background           { fill:#f68630 !important }
+.simple_applauncher__foreground           { fill:#ffffff !important }
+.simple_calculator__background            { fill:#f68630 !important }
+.simple_calculator__foreground            { fill:#ffffff !important }
+.simple_calendar__background              { fill:#f68630 !important }
+.simple_calendar__foreground              { fill:#ffffff !important }
+.simple_camera__background                { fill:#f68630 !important }
+.simple_camera__foreground                { fill:#ffffff !important }
+.simple_filemanager__background           { fill:#f68630 !important }
+.simple_filemanager__foreground           { fill:#ffffff !important }
+.simple_notes__background                 { fill:#f68630 !important }
+.simple_notes__foreground                 { fill:#ffffff !important }
+.simple_musicplayer__background           { fill:#f68630 !important }
+.simple_musicplayer__foreground           { fill:#ffffff !important }
+.simple_flashlight__background            { fill:#f68630 !important }
+.simple_flashlight__foreground            { fill:#ffffff !important }
+.locker__background                       { fill:#0b96d2 !important }
+.locker__foreground                       { fill:#ffffff !important }
+.gallery__background                      { fill:#485d66 !important } /* eeeeee */
+.gallery__foreground                      { fill:#ff764a !important } /* ba2525 ef5754  */
+.loophabittracker__background             { fill:#1976d2 !important }
+.loophabittracker__foreground             { fill:#ffffff !important }
+.satstat__background                      { fill:#101010 !important }
+.satstat__foreground                      { fill:#33b5e5 !important } /* ff8800 efefef */
+.k9mail__background                       { fill:#727376 !important }
+.k9mail__foreground                       { fill:#ec1c24 !important }
+.k9mail_material_unofficial__background   { fill:#f44336 !important }
+.k9mail_material_unofficial__foreground   { fill:#ffffff !important }
+.firefoxfocus__background                 { fill:#bf5670 !important } /* cc5845 -> bf5670 -> 974b8c -> 934c8e -> 705996 */
+.firefoxfocus__foreground                 { fill:#ffffff !important }
+.criticalmaps__background                 { fill:#f3f3f3 !important }
+.criticalmaps__foreground                 { fill:#1a171b !important }
+.camera__background                       { fill:#e2e2e2 !important }
+.camera__foreground                       { fill:#888888 !important } /* d32f2f f44336 */
+.messaging__background                    { fill:#96c95c !important } /* 96c95c -> 8bc34b , eeeeee */
+.messaging__foreground                    { fill:#ffffff !important } /* 8bc34b , ffffff */
+.stringlate__background                   { fill:#009587 !important }
+.stringlate__foreground                   { fill:#fdbf07 !important } /* 212121 fdbf07 */
+.oinotepad__background                    { fill:#f9f9f9 !important }
+.oinotepad__foreground                    { fill:#c4c516 !important } /* 21c7e1 */
+.oishoppinglist__background               { fill:#ffdf5e !important }
+.oishoppinglist__foreground               { fill:#122a64 !important }
+.eleven_music__background                 { fill:#c9216c !important } /* c9216c -> c71867 -> c61665 , a71b6e*/
+.eleven_music__foreground                 { fill:#efefef !important }
+.settings__background                     { fill:#678390 !important } /* 6c8794 -> 678390 -> 627f8d */
+.settings__foreground                     { fill:#abffec !important } /* d2dbde */
+.email__background                        { fill:#ffcf46 !important } /* ffcf46 -> ffce44 -> ffcd41 , ffc010 -> ffc00e -> ffbf0a */
+.email__foreground                        { fill:#8b8b8b !important } /* efefef e3e3e3 , 8b8b8b */
+.documentviewer__background               { fill:#f1f2f1 !important } /* 555753 */
+.documentviewer__foreground               { fill:#204a87 !important } 
+.getchromium__background                  { fill:#ffffff !important }
+.getchromium__foreground                  { fill:#060606 !important }
+.threema__background                      { fill:#4b4b4b !important } 
+.threema__foreground                      { fill:#ffffff !important } /* 45e76e 202020 */
+.termux__background                       { fill:#000000 !important }
+.termux__foreground                       { fill:#ffffff !important } /* bfcbcd */
+.phone__background                        { fill:#ffffff !important }
+.phone__foreground                        { fill:#1ab1f5 !important } /* 1ab1f5 -> 14aff5 -> 0aabf4 -> 06aaf4 -> 04a9f4 , 1487c7 -> 0b8cd3 */
+.documentsui__background                  { fill:#000000 !important } /* 00c5ab -> 00c0a5 */
+.documentsui__foreground                  { fill:#ececec !important }
+
+.background 			          { fill:lightblue }	
+.foreground 			          { fill:green }

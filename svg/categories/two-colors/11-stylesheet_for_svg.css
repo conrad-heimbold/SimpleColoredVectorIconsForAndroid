@@ -1,0 +1,13 @@
+/* test */
+svg                                       { margin-left:auto; 
+                                            margin-right:auto; 
+                                            display:block; 
+                                            margin-top:20%; 
+                                            margin-bottom:20%; 
+                                            shape-rendering:crispEdges;
+                           		    background-color:white; }
+rect 					  { border-radius:2px !important}
+.background			          { -webkit-filter: drop-shadow(1.5px 1.5px 3px #111);
+            					    filter: drop-shadow(1.5px 1.5px 3px #111);}
+.background 			          { fill:lightblue }	
+.foreground 			          { fill:green }
