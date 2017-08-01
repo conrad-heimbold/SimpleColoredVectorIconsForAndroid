@@ -1,4 +1,4 @@
-# SimpleTwoColorVectorIcons
+# SimpleVectorIcons
 ## Abbreviations
 
 - svg    = scalable vector graphics (XML)
