@@ -1,0 +1,12 @@
+<?xml-stylesheet type="text/css" href="11-stylesheet_for_svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.1" viewBox="0 0 48 48" class="conversations" >
+ <g class="conversations__background background" >
+  <path d="m40.36 27.84a1.712 1.712 0 0 0 -1.224 0.5l-5.394 5.396-5.394 5.393a1.712 1.712 0 0 0 0.768 2.863l7.368 1.975 7.368 1.974a1.712 1.712 0 0 0 2.096 -2.096l-1.974-7.37-1.975-7.368a1.712 1.712 0 0 0 -1.638 -1.268z"/>
+  <circle cx="24" cy="24" r="22"/>
+ </g>
+ <g class="conversations__foreground foreground" >
+  <circle cx="14.25" cy="24" r="2.25"/>
+  <circle cx="24" cy="24" r="2.25"/>
+  <circle cx="33.75" cy="24" r="2.25"/>
+ </g>
+</svg>
