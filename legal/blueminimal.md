@@ -1,0 +1,4 @@
+- [Blue Minimal](https://github.com/scoute-dich/Blue-Minimal) and [the original blue minimal icon](https://github.com/scoute-dich/Blue-Minimal/blob/master/theme/src/main/res/drawable-xxxhdpi/ic_launcher.png) are licensed under the [GNU GPLv3 or later](https://github.com/scoute-dich/Blue-Minimal/blob/master/LICENSE.md), by [Gaukler Faun](https://github.com/scoute-dich)
+- inspiration came from the [blueminimal icon](https://github.com/1C3/ICEcons/blob/master/app/src/main/res/drawable-nodpi/nodpi_blueminimal.png) in the icon pack [ICEcons](https://github.com/1C3/ICEcons), licensed under the [GNU GPLv3](https://github.com/1C3/ICEcons/blob/master/LICENSE) by [1C3](https://github.com/1C3);
+- inspiration also came from the icon for the **SystemUI app** on Cyanogenmod/LineageOS <br/>
+  (under ``/system/priv-app/SystemUI/SystemUI.apk``; inside the apk at ``res/xml/icon.xml``)

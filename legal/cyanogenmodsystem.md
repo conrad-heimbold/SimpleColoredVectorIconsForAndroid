@@ -1,0 +1,2 @@
+- [CyanogenMod]( ) and [the original  icon](  ) are licensed under the [  ](  ), by [ ]( )
+- inspiration came from the [ icon](https://github.com/1C3/ICEcons/blob/master/app/src/main/res/drawable-nodpi/nodpi_ .png) in the icon pack [ICEcons](https://github.com/1C3/ICEcons), licensed under the [GNU GPLv3](https://github.com/1C3/ICEcons/blob/master/LICENSE) by [1C3](https://github.com/1C3)

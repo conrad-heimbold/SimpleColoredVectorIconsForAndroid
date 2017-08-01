@@ -1,0 +1,2 @@
+- official bandcamp logo variations can be found on [their website](https://bandcamp.com/buttons). You are free to use them in any way you want, as long as you don't use it to present bandcamp in a bad light. 
+- inspiration came from the [bandcamp icon](https://github.com/1C3/ICEcons/blob/master/app/src/main/res/drawable-nodpi/nodpi_bandcamp.png) in the icon pack [ICEcons](https://github.com/1C3/ICEcons), licensed under the [GNU GPLv3](https://github.com/1C3/ICEcons/blob/master/LICENSE) by [1C3](https://github.com/1C3)

@@ -1,0 +1,1 @@
+- [Atomic](https://github.com/indrora/Atomic) and [the original icon](https://github.com/indrora/Atomic/blob/master/application/src/main/ic_launcher-web.png) are licensed under the [GNU GPLv3](https://github.com/indrora/Atomic/blob/master/LICENSE) in 2012, by [Morgan Gangwere](https://github.com/indrora)

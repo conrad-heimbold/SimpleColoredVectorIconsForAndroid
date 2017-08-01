@@ -1,0 +1,10 @@
+<?xml-stylesheet type="text/css" href="11-stylesheet_for_svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.1" viewBox="0 0 48 48" class="ankidroid" >
+ <g class="ankidroid__background background" >
+  <rect x="8" y="2" width="32" height="44" rx="3" ry="3"/>
+ </g>
+ <g class="ankidroid__foreground foreground" >
+  <path d="m13.51 34.24 4.141-3.634-0.6459-5.472 4.736 2.816 5-2.305-1.214 5.374 3.739 4.047-5.487 0.5059-2.694 4.807-2.177-5.062z"/>
+  <path d="m31.39 19.86-2.833-2.617-3.762 0.85 1.614-3.503-1.971-3.315 3.83 0.4521 2.544-2.9 0.7536 3.782 3.543 1.524-3.364 1.886z"/>
+ </g>
+</svg>

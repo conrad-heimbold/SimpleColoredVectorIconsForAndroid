@@ -1,0 +1,2 @@
+- The "Android" name, the [Android logo](https://developer.android.com/images/android-logo.png), and [other trademarks](http://www.google.com/permissions/) are property of Google Inc. You may not use the logo or the logo's custom typeface.
+- The [Android Robot logo](https://developer.android.com/images/robot-tiny.png) can be used, reproduced, and modified freely in marketing communications. The Android Robot logo is licensed under the terms of the [Creative Commons Attribution license](http://creativecommons.org/licenses/by/2.5/) and any use of it must be attributed as such.

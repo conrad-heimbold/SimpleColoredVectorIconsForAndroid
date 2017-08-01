@@ -1,0 +1,9 @@
+<?xml-stylesheet type="text/css" href="11-stylesheet_for_svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.1" viewBox="0 0 48 48" class="atomic" >
+ <g class="atomic__background background" >
+  <rect x="5" y="5" width="38" height="38" rx="3"/>
+ </g>
+ <g class="atomic__foreground foreground" >
+  <path d="m18.29 11-0.8816 5h-5l-0.7053 4h5l-1.411 8h-5l-0.7053 4h5l-0.8816 5h4l0.8816-5h8l-0.8816 5h4l0.8816-5h5l0.7053-4h-5l1.411-8h5l0.7053-4h-5l0.8816-5h-4l-0.8816 5h-8l0.8816-5zm2.413 9h8l-1.411 8h-8z"/>
+ </g>
+</svg>

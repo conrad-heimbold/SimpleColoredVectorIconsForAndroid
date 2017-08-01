@@ -9,7 +9,7 @@
 *.class
 
 # Generated files
-bin/
+# bin/
 gen/
 out/
 
@@ -53,3 +53,10 @@ google-services.json
 freeline.py
 freeline/
 freeline_project_description.json
+
+# SQUARE, CIRCLE, RECT-H and RECT-V folders that have only been generated sorting files comparing them
+SQUARE/
+CIRCLE/
+RECT-H/
+RECT-V/
+CUSTOM/

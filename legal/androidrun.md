@@ -1,0 +1,1 @@
+- [AndroidRun](https://sourceforge.net/projects/androidrun/) and [the original  icon](https://sourceforge.net/p/androidrun/code/ci/master/tree/res/drawable-xhdpi/run_icon.png?format=raw) are licensed under the [GNU GPLv3](https://sourceforge.net/directory/license:gplv3/) in 2016, by [BrunoVedder](https://sourceforge.net/u/brunovedder/profile/)

@@ -1,0 +1,1 @@
+- [Audinaut](https://github.com/nvllsvm/Audinaut) and [the original audinaut icon](https://github.com/nvllsvm/Audinaut/blob/master/audinaut.svg) are licensed under the [GNU GPLv3](https://github.com/nvllsvm/Audinaut/blob/master/LICENSE), by [Andrew Rabert](https://github.com/nvllsvm)

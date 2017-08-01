@@ -1,0 +1,9 @@
+<?xml-stylesheet type="text/css" href="11-stylesheet_for_svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.1" viewBox="0 0 48 48" class="alarmklock" >
+ <g class="alarmklock__background background" >
+  <circle cx="24" cy="24" r="22"/>
+ </g>
+ <g class="alarmklock__foreground foreground" >
+  <path d="m25 5a18 18 0 0 0 -18 18 18 18 0 0 0 18 18 18 18 0 0 0 18 -18 18 18 0 0 0 -18 -18zm1 3a14 14 0 0 1 14 14 14 14 0 0 1 -14 14 14 14 0 0 1 -14 -14 14 14 0 0 1 14 -14zm-1.25 5v9h2.5v-9h-2.5z"/>
+ </g>
+</svg>

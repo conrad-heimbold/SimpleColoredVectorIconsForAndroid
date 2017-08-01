@@ -1,0 +1,9 @@
+<?xml-stylesheet type="text/css" href="11-stylesheet_for_svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.1" viewBox="0 0 48 48" class="afwall" >
+ <g class="afwall__background background" >
+  <path d="m8 4v28c0 8 16 14 16 14s16-6 16-14v-28s-8-2-16-2-16 2-16 2z"/>
+ </g>
+ <g class="afwall__foreground foreground" >
+  <path d="m29.46 11.3-7.301 14.45l-6-3.301-2.77 5 11.23 6.221 10-19.79z"/>
+ </g>
+</svg>

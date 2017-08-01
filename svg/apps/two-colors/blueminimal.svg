@@ -1,0 +1,9 @@
+<?xml-stylesheet type="text/css" href="11-stylesheet_for_svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.1" viewBox="0 0 48 48" class="blueminimal" >
+ <g class="blueminimal__background background" >
+  <circle cx="24" cy="24" r="22"/>
+ </g>
+ <g class="blueminimal__foreground foreground" >
+  <path d="m14 13v22h20v-22l-10 11z"/>
+ </g>
+</svg>

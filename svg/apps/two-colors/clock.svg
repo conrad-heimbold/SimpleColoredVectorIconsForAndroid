@@ -1,0 +1,9 @@
+<?xml-stylesheet type="text/css" href="11-stylesheet_for_svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.1" viewBox="0 0 48 48" class="clock" >
+ <g class="clock__background background" >
+  <circle cx="24" cy="24" r="22"/>
+ </g>
+ <g class="clock__foreground foreground" >
+  <rect x="21.84" y="8" width="4.324" height="18"/>
+ </g>
+</svg>

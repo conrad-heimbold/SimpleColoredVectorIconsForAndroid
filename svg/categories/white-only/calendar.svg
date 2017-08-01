@@ -1,0 +1,12 @@
+<svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g fill="#fff">
+  <path d="m8 7c-1.662 0-3 1.338-3 3v28c0 1.662 1.338 3 3 3h32c1.662 0 3-1.338 3-3v-28c0-1.662-1.338-3-3-3h-2.5v4c0 0.5523-0.4477 1-1 1h-6c-0.5523 0-1-0.4477-1-1v-4h-11v4c0 0.5523-0.4477 1-1 1h-6c-0.5523 0-1-0.4477-1-1v-4zm0 9h32v22h-32z"/>
+  <rect x="12.5" y="03" width="4" height="7"/>
+  <rect x="31.5" y="03" width="4" height="7"/>
+  <rect x="10.0" y="28" width="8" height="8"/>
+  <rect x="20.0" y="28" width="8" height="8"/>
+  <rect x="10.0" y="18" width="8" height="8"/>
+  <rect x="20.0" y="18" width="8" height="8"/>
+  <rect x="30.0" y="18" width="8" height="8"/>
+</g>
+</svg>

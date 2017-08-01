@@ -1,0 +1,15 @@
+<?xml-stylesheet type="text/css" href="11-stylesheet_for_svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.1" viewBox="0 0 48 48" class="android" >
+ <g class="android__background background">
+  <circle cx="24" cy="24" r="19"/>
+  <rect x="05" y="30" width="38" height="13" rx="2" ry="2"/>
+  <rect x="05" y="24" width="5" height="14" rx="0" ry="0"/>
+  <rect x="38" y="24" width="5" height="14" rx="0" ry="0"/>
+  <path d="m05.89 05.89c1.21-1.21 3.16-1.19 4.39+0.04l4.79+4.79c1.23+1.23 1.24+3.18 0.04+4.39-1.21+1.21-3.16+1.19-4.39-0.04l-4.79-4.79c-1.23-1.23-1.24-3.18-0.04-4.39z"/>
+  <path d="m32.89 15.11c1.21+1.21 3.16+1.19 4.39-0.04l4.79-4.79c1.23-1.23 1.24-3.18 0.04-4.39-1.21-1.21-3.16-1.19-4.39+0.04l-4.79+4.79c-1.23+1.23-1.24+3.18-0.04+4.39z"/>
+ </g>
+ <g class="android__foreground foreground" >
+  <circle cx="16" cy="22.5" r="3.5"/>
+  <circle cx="32" cy="22.5" r="3.5"/>
+ </g>
+</svg>

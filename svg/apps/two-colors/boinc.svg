@@ -1,0 +1,17 @@
+<?xml-stylesheet type="text/css" href="11-stylesheet_for_svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.1" viewBox="0 0 48 48" class="boinc" >
+ <g class="boinc__background background" >
+  <circle cx="24" cy="24" r="18"/>
+  <path d="m2.75 36.75 7 7 12.75-12.75-7-7z"/>
+  <path d="m25.5 17 7 7 12.75-12.75l-7-7z"/>
+  <path d="m4.25 9.75 7-7 12.75 12.75l-7 7z"/>
+  <path d="m24 32.5 7-7 12.75 12.75-7 7z"/>
+ </g>
+ <g class="boinc__foreground foreground" >
+  <path d="m24 12a12 12 0 0 0 -12 12 12 12 0 0 0 12 12 12 12 0 0 0 12 -12 12 12 0 0 0 -12 -12zm0 4a8 8 0 0 1 8 8 8 8 0 0 1 -8 8 8 8 0 0 1 -8 -8 8 8 0 0 1 8 -8z"/>
+  <path d="m7 41 2.75 2.75 11.75-11.75h-5.5z"/>
+  <path d="m32 32v-5.5l11.75 11.75-2.75 2.75z"/>
+  <path d="m26.5 16h5.5l9-9-2.75-2.75z"/>
+  <path d="m16 21.5v-5.5l-9-9-2.75 2.75z"/>
+ </g>
+</svg>

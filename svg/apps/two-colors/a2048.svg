@@ -1,0 +1,15 @@
+<?xml-stylesheet type="text/css" href="11-stylesheet_for_svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.1" viewBox="0 0 48 48" class="a2048">
+ <g class="a2048__background background" >
+  <rect x="5" y="5" width="38" height="38" rx="3"/>
+ </g>
+ <g class="a2048__foreground foreground">
+  <rect x="7" y="16" width="7" height="7"/>
+  <rect x="16" y="7" width="7" height="7"/>
+  <rect x="16" y="16" width="7" height="7"/>
+  <rect x="25" y="16" width="7" height="7"/>
+  <rect x="34" y="16" width="7" height="7"/>
+  <rect x="25" y="25" width="7" height="7"/>
+  <rect x="25" y="34" width="7" height="7"/>
+ </g>
+</svg>

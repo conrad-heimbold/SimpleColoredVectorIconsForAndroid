@@ -1,0 +1,9 @@
+<?xml-stylesheet type="text/css" href="11-stylesheet_for_svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.1" viewBox="0 0 48 48" class="bluetooth" >
+ <g class="bluetooth__background background">
+  <circle cx="24" cy="24" r="22" />
+ </g>
+ <g class="bluetooth__foreground foreground">
+  <path d="m22.5 8v12.5l-6.301-6.301-2 2 7.801 7.801-7.801 7.801 2 2 6.301-6.301v12.5h1.5l9-9-7-7 7-7-9-9zm3 5.5 3.5 3.5-3.5 3.5zm0 14 3.5 3.5-3.5 3.5z" />
+ </g>
+</svg>

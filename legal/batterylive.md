@@ -1,0 +1,1 @@
+- [Battery Live](https://github.com/enricocid/Battery-Live) and [the original batterylive icon](https://github.com/enricocid/Battery-Live/blob/master/art/icon.png) are licensed under the [GNU GPLv3](https://github.com/enricocid/Battery-Live/blob/master/LICENSE), by [EnricoD](https://github.com/enricocid)

@@ -1,0 +1,19 @@
+<?xml-stylesheet type="text/css" href="11-stylesheet_for_svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.1" viewBox="0 0 48 48" class="cmbugreport" >
+ <g class="cmbugreport__background background" >
+  <circle cx="24" cy="24" r="22"/>
+ </g>
+ <g class="cmbugreport__foreground foreground" >
+  <rect x="13.5" y="18.33" width="21" height="2.666"/>
+  <rect x="13.5" y="23.5" width="21" height="2.666"/>
+  <rect x="13.5" y="28.67" width="21" height="2.666"/>
+  <path d="m17.38 13.62 1.872-1.872 4.75 4.75-1.872 1.872z"/>
+  <path d="m28.75 11.75 1.872 1.872-4.75 4.75l-1.872-1.872z"/>
+  <path d="m16.27 20.23a8 8 0 0 1 7.727 -5.929 8 8 0 0 1 7.727 5.929"/>
+  <path d="m31.73 29.37a8 8 0 0 1 -7.727 5.929 8 8 0 0 1 -7.727 -5.929"/>
+  <rect x="16.25" y="21" width="5" height="2.5"/>
+  <rect x="16.25" y="26.17" width="5" height="2.5"/>
+  <rect x="26.75" y="21" width="5" height="2.501"/>
+  <rect x="26.75" y="26.17" width="5" height="2.5"/>
+ </g>
+</svg>

@@ -1,0 +1,1 @@
+- [Antox](https://github.com/Antox/Antox) and [the original antox icon](https://github.com/Antox/Antox/blob/master/app/src/main/res/drawable-xxxhdpi/ic_launcher.png) are licensed under the [GNU GPLv3](https://github.com/Antox/Antox/blob/master/COPYING), by the [Antox team](https://github.com/Antox/)

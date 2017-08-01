@@ -1,0 +1,2 @@
+- [CPUz](http://www.cpuid.com/) and [the original cpuz icon](http://www.cpuid.com/medias/images/softwares/cpu-z.svg), created by [CPUID](http://www.cpuid.com/), are freely usable, they do not seem to have any copyright. 
+- inspiration came from the [CPUZ icon](https://github.com/1C3/ICEcons/blob/master/app/src/main/res/drawable-nodpi/nodpi_cpuz.png) in the icon pack [ICEcons](https://github.com/1C3/ICEcons), licensed under the [GNU GPLv3](https://github.com/1C3/ICEcons/blob/master/LICENSE) by [1C3](https://github.com/1C3)

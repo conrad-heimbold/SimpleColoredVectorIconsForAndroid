@@ -1,0 +1,16 @@
+<?xml-stylesheet type="text/css" href="11-stylesheet_for_svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" version="1.1" viewBox="0 0 48 48" class="android_provisioning" >
+ <g class="android_provisioning__background background" >
+  <circle cx="24" cy="24" r="22"/>
+ </g>
+ <g class="android_provisioning__foreground foreground" >
+  <path d="m14 27c-1.108 0-2 0.892-2 2v3.373c0 1.108 0.892 2 2 2h20c1.108 0 2-0.892 2-2v-3.373c0-1.108-0.892-2-2-2h-8v1.5h-4v-1.5z"/>
+  <path d="m12 27v2h24v-2h-10v1.5h-4v-1.5z"/>
+  <rect x="20" y="12" width="8" height="2" rx="0" ry="0"/>
+  <path d="m20 12v2h-2z"/>
+  <path d="m28 12v2h2z"/>
+  <rect x="18" y="14" width="2" height="2"/>
+  <rect x="28" y="14" width="2" height="2"/>
+  <path d="m13 16c-1.108 0-2 0.892-2 2v6c0 1.108 0.892 2 2 2h9v-2h4v2h9c1.108 0 2-0.892 2-2v-6c0-1.108-0.892-2-2-2z"/>
+ </g>
+</svg>
