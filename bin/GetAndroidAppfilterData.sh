@@ -1,18 +1,15 @@
 #!/bin/bash
-  SOURCE_URL=; 
-  SOURCE_URL1=; 
-  SOURCE_URL2=;
-  DEVELOPER=; 
-  DEVELOPER_URL=; 
-  REPO_TYPE=; 
-  REPO_NAME=; 
-  APP_NAME1=; 
-  APP_NAME2=; 
-  GIT_URL=; 
-  SVN_URL=; 
-  HG_URL=; 
+# APP_NAME1 comes from the F-Droid Metadata File, after "Auto Name:"
+# APP_NAME2 comes from the F-Droid Metadata File, after "Name:"
+# APP_NAME3 comes from the AndroidManifest.xml File, from manifest/application/@android:name="..."
+# SOURCE_URL1 comes from the F-Droid Metadata File, after "Repo:"
+# SOURCE_URL2 comes from the F-Droid Metadata File, after "Source Code:"
+  SOURCE_URL=; 	SOURCE_URL1=; 	SOURCE_URL2=;
+  DEVELOPER=; 	DEVELOPER_URL=; 
+  REPO_TYPE=; 	REPO_NAME=; 
+  APP_NAME=; 	APP_NAME1=; 	APP_NAME2=; 	APP_NAME3=; 	APP_NAME_SIMPLE=; 
+  GIT_URL=; 	SVN_URL=; 	HG_URL=; 
   SUBDIR=; 
-  APP_NAME_SIMPLE=; 
   FILE=$1
   DEST_DIR=$2
   FILENAME=; 
@@ -89,7 +86,7 @@
     fi
   fi
   # Give the $APP_NAME a canonical form (without whitespace, without special chars, etc.)
-  APP_NAME_SIMPLE=$(echo $APP_NAME | tr '[:upper:]' '[:lower:]' | sed -E "s|^ ||g" | sed -E "s|[,. /+#\(\)-\'!]|_|g" | sed -E 's/[_]{1,3}/_/g' | sed -E "s|_$||g" )
+  APP_NAME_SIMPLE=$(echo $APP_NAME | tr '[:upper:]' '[:lower:]' | sed -E "s|^ ||g" | sed -E "s|[\;:,. /+\(\)\!\?\*=\`\´}{'$ -]|_|g" | sed -E 's/[_]{1,3}/_/g' | sed -E "s|[_]{1,5}\$||g" )
   # Search for last occurence of $SUBDIR (that's were I can get all the source): 
   SUBDIR=$(tac $FILE | grep -m 1 subdir= | sed 's/  subdir=//g' | tr -d '[:space:]')
 
@@ -131,60 +128,54 @@
   fi
   fi
   # DOWNLOAD the AndroidManifest.xml file
-  mkdir $DEST_DIR/"$APP_NAME_SIMPLE"
+  mkdir -p $DEST_DIR/"$APP_NAME_SIMPLE"
   cd $DEST_DIR/"$APP_NAME_SIMPLE"
-
   wget -q  "$ANDROID_MANIFEST_URL1"
   wget -q  "$ANDROID_MANIFEST_URL2"
-
 # What I am searching for inside the AndroidManifest: 
 # $PACKAGE_NAME
 # $LAUNCHER_ICON_PATHS 
 # $LAUNCHER_ACTIVITIES
-
   PACKAGE_NAME=$(xmllint --xpath 2>/dev/null \
-    "/manifest/@package" AndroidManifest.xml | sed 's/package=\"//g' | sed 's/\"//g')
-
+    "/manifest/@package" AndroidManifest.xml | sed 's/package=\"//g' | sed 's/\"//g' | tr -d '[:space:]')
 # Parsing the AndroidManifest.xml file: 
   cat AndroidManifest.xml | sed 's/android://g' > AndroidManifestWithoutAndroidNS.xml 
-  LIST_OF_ACTIVITIES=$(xmllint --xpath 2>/dev/null \
-    "//category[@name='android.intent.category.LAUNCHER']/../action[@name='android.intent.action.MAIN']/../../@name" \
-    AndroidManifestWithoutAndroidNS.xml 2>/dev/null \
-    | sed 's/name=\"/ /g' | sed 's/\"/ /g' | tr -s '[:space:]'; printf "\n")
-  LIST_OF_ACTIVITY_ICONS=$(xmllint --xpath 2>/dev/null \
-    "//category[@name='android.intent.category.LAUNCHER']/../action[@name='android.intent.action.MAIN']/../../@icon" \
-    AndroidManifestWithoutAndroidNS.xml 2>/dev/null \
-    | sed 's/icon=\"/ /g' | sed 's/\"/ /g' | tr -s '[:space:]'; printf "\n")
-  APPLICATION_ICON=$(xmllint --xpath  \
-    "//application/@icon" \
-    AndroidManifestWithoutAndroidNS.xml 2>/dev/null \
-    | sed 's/icon=\"/ /g' | sed 's/\"/ /g' | tr -s '[:space:]'; printf "\n")
-
-  echo "APP_NAME_SIMPLE:  $APP_NAME_SIMPLE" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "APP_NAME:         $APP_NAME" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "APP_NAME1:        $APP_NAME1" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "APP_NAME2:        $APP_NAME2"   >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "PACKAGE_NAME:     $PACKAGE_NAME" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "SOURCE_URL:       $SOURCE_URL" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "SOURCE_URL1:      $SOURCE_URL1" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "SOURCE_URL2:      $SOURCE_URL2" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "DEVELOPER_URL:    $DEVELOPER_URL" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "DEVELOPER:        $DEVELOPER" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "REPO_NAME:        $REPO_NAME" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "SUBDIR:           $SUBDIR">> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "ACTIVITIES:       $LIST_OF_ACTIVITIES" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "ACTIVITY_ICONS:   $LIST_OF_ACTIVITY_ICONS" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  echo "APPLICATION_ICON: $APPLICATION_ICON" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  rm $DEST_DIR/$APP_NAME_SIMPLE/AndroidManifestWithoutAndroidNS.xml
-
+  LIST_OF_ACTIVITIES=$(xmllint --xpath 2>/dev/null     "//category[@name='android.intent.category.LAUNCHER']/../action[@name='android.intent.action.MAIN']/../../@name" \
+    AndroidManifestWithoutAndroidNS.xml 2>/dev/null | sed 's/name=\"/ /g' | sed 's/\"/ /g' | tr -s '[:space:]'; printf "\n")
+  LIST_OF_ACTIVITY_ICONS=$(xmllint --xpath 2>/dev/null "//category[@name='android.intent.category.LAUNCHER']/../action[@name='android.intent.action.MAIN']/../../@icon" \
+    AndroidManifestWithoutAndroidNS.xml 2>/dev/null | sed 's/icon=\"/ /g' | sed 's/\"/ /g' | tr -s '[:space:]'; printf "\n")
+  APPLICATION_ICON=$(xmllint --xpath  "//application/@icon" \
+    AndroidManifestWithoutAndroidNS.xml 2>/dev/null | sed 's/icon=\"/ /g' | sed 's/\"/ /g' | tr -s '[:space:]'; printf "\n")
+  APP_NAME3=$(xmllint --xpath "//application/@name" \
+    AndroidManifestWithoutAndroidNS.xml 2>/dev/null | sed 's/name=\"/ /g' | sed 's/\"/ /g' | tr -s '[:space:]'; printf "\n")
   for ACTIVITY in $LIST_OF_ACTIVITIES
-  do
-  NEW_ACTIVITY_NAME=$(echo $ACTIVITY | sed "s|^\.|$PACKAGE_NAME\.|g")
-  NEW_LIST_OF_ACTIVITIES="$NEW_LIST_OF_ACTIVITIES $NEW_ACTIVITY_NAME"
+    do
+    NEW_ACTIVITY_NAME=$(echo $ACTIVITY | sed "s|^\.|$PACKAGE_NAME\.|g")
+    NEW_LIST_OF_ACTIVITIES="$NEW_LIST_OF_ACTIVITIES $NEW_ACTIVITY_NAME"
   done
-
-  for ACTIVITY in $NEW_LIST_OF_ACTIVITIES
-  do
-  echo "<!-- $APP_NAME -->" >> $DEST_DIR/appfilter.xml
-  echo "<item component=\"ComponentInfo{$PACKAGE_NAME/$ACTIVITY}\" drawable=\"$APP_NAME_SIMPLE\" />" >> $DEST_DIR/appfilter.xml
-  done
+#  for ACTIVITY in $NEW_LIST_OF_ACTIVITIES
+#    do
+    # echo "<!-- $APP_NAME - $ACTIVITY -->" >> $DEST_DIR/appfilter.xml
+    # echo "<item component=\"ComponentInfo{$PACKAGE_NAME/$ACTIVITY}\" drawable=\"$APP_NAME_SIMPLE\" />" >> $DEST_DIR/appfilter.xml
+#  done
+  echo "APP_NAME_SIMPLE:  $APP_NAME_SIMPLE" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "APP_NAME:         $APP_NAME" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "APP_NAME1:        $APP_NAME1" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "APP_NAME2:        $APP_NAME2"   
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  # echo "PACKAGE_NAME:     $PACKAGE_NAME" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  # echo "SOURCE_URL:       $SOURCE_URL" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  # echo "SOURCE_URL1:      $SOURCE_URL1" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  # echo "SOURCE_URL2:      $SOURCE_URL2" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  # echo "DEVELOPER_URL:    $DEVELOPER_URL" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  # echo "DEVELOPER:        $DEVELOPER" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  # echo "REPO_NAME:        $REPO_NAME" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  # echo "SUBDIR:           $SUBDIR">> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  # echo "ACTIVITIES:       $NEW_LIST_OF_ACTIVITIES" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  # echo "ACTIVITY_ICONS:   $LIST_OF_ACTIVITY_ICONS" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  # echo "APPLICATION_ICON: $APPLICATION_ICON" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "APP_NAME3:        $APP_NAME3"
+  rm $DEST_DIR/$APP_NAME_SIMPLE/AndroidManifestWithoutAndroidNS.xml
