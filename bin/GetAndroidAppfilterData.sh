@@ -17,8 +17,8 @@
   PACKAGE_NAME=; 
 # PART 1: PARSE ALL THE NECESSARY INFORMATION FROM THE METADATA FILES IN F-DROID
 # ===================================================================================================================================
-  SOURCE_URL1=$(cat $FILE | grep "^Repo:" | sed 's/Repo\://' | sed 's/\.git$//')
-  SOURCE_URL2=$(cat $FILE | grep "^Source Code:" | sed 's/Source Code\://')
+  SOURCE_URL1=$(grep "^Repo:" $FILE | sed 's/Repo\://' | sed 's/\.git$//')
+  SOURCE_URL2=$(grep "^Source Code:" $FILE | sed 's/Source Code\://')
   SOURCE_URL=; 
   # only take the SOURCE_URL* that is not empty.
   # test if both SOURCE_URLS are empty => ERROR 
@@ -43,7 +43,7 @@
     fi
   fi
   # Create the URL to checkout the REPO via git/svn
-  REPO_TYPE=$(cat $FILE | grep "^Repo Type:" | sed 's/Repo Type\://')
+  REPO_TYPE=$(grep "^Repo Type:" $FILE | sed 's/Repo Type\://')
   if [ "$REPO_TYPE"=="git" ]
   then
     GIT_URL=$(echo $SOURCE_URL | sed 's/$/.git/'); 
@@ -60,8 +60,8 @@
   DEVELOPER_URL=$(echo $SOURCE_URL | sed "s|/$REPO_NAME||")
   DEVELOPER=$(basename $DEVELOPER_URL)
   # Get the app name
-  APP_NAME1=$(cat $FILE | grep "^Auto Name:" | sed 's/^Auto Name\://' )
-  APP_NAME2=$(cat $FILE | grep "^Name:"      | sed 's/^Name\://')
+  APP_NAME1=$(grep "^Auto Name:" $FILE | sed 's/^Auto Name\://' )
+  APP_NAME2=$(grep "^Name:"      $FILE | sed 's/^Name\://')
   # only take the APP_NAME* that is not empty.
   # test if both SOURCE_URLS are empty => ERROR
   if [ -z "$APP_NAME1" ] && [ -z "$APP_NAME2" ]
@@ -130,8 +130,7 @@
   # DOWNLOAD the AndroidManifest.xml file
   mkdir -p $DEST_DIR/"$APP_NAME_SIMPLE"
   cd $DEST_DIR/"$APP_NAME_SIMPLE"
-  wget -q  "$ANDROID_MANIFEST_URL1"
-  wget -q  "$ANDROID_MANIFEST_URL2"
+  $(wget -q  "$ANDROID_MANIFEST_URL1" || wget -q  "$ANDROID_MANIFEST_URL2" ) && echo "SUCCESS!"
 # What I am searching for inside the AndroidManifest: 
 # $PACKAGE_NAME
 # $LAUNCHER_ICON_PATHS 
@@ -153,11 +152,11 @@
     NEW_ACTIVITY_NAME=$(echo $ACTIVITY | sed "s|^\.|$PACKAGE_NAME\.|g")
     NEW_LIST_OF_ACTIVITIES="$NEW_LIST_OF_ACTIVITIES $NEW_ACTIVITY_NAME"
   done
-#  for ACTIVITY in $NEW_LIST_OF_ACTIVITIES
-#    do
-    # echo "<!-- $APP_NAME - $ACTIVITY -->" >> $DEST_DIR/appfilter.xml
-    # echo "<item component=\"ComponentInfo{$PACKAGE_NAME/$ACTIVITY}\" drawable=\"$APP_NAME_SIMPLE\" />" >> $DEST_DIR/appfilter.xml
-#  done
+  for ACTIVITY in $NEW_LIST_OF_ACTIVITIES
+    do
+    echo "<!-- $APP_NAME - $ACTIVITY -->" >> $DEST_DIR/appfilter.xml
+    echo "<item component=\"ComponentInfo{$PACKAGE_NAME/$ACTIVITY}\" drawable=\"$APP_NAME_SIMPLE\" />" >> $DEST_DIR/appfilter.xml
+  done
   echo "APP_NAME_SIMPLE:  $APP_NAME_SIMPLE" 
   # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
   echo "APP_NAME:         $APP_NAME" 
@@ -166,16 +165,32 @@
   # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
   echo "APP_NAME2:        $APP_NAME2"   
   # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  # echo "PACKAGE_NAME:     $PACKAGE_NAME" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  # echo "SOURCE_URL:       $SOURCE_URL" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  # echo "SOURCE_URL1:      $SOURCE_URL1" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  # echo "SOURCE_URL2:      $SOURCE_URL2" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  # echo "DEVELOPER_URL:    $DEVELOPER_URL" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  # echo "DEVELOPER:        $DEVELOPER" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  # echo "REPO_NAME:        $REPO_NAME" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  # echo "SUBDIR:           $SUBDIR">> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  # echo "ACTIVITIES:       $NEW_LIST_OF_ACTIVITIES" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  # echo "ACTIVITY_ICONS:   $LIST_OF_ACTIVITY_ICONS" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
-  # echo "APPLICATION_ICON: $APPLICATION_ICON" >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
   echo "APP_NAME3:        $APP_NAME3"
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "PACKAGE_NAME:     $PACKAGE_NAME" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "SOURCE_URL:       $SOURCE_URL" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "SOURCE_URL1:      $SOURCE_URL1" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "SOURCE_URL2:      $SOURCE_URL2" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "DEVELOPER_URL:    $DEVELOPER_URL" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "DEVELOPER:        $DEVELOPER" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "REPO_NAME:        $REPO_NAME" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "SUBDIR:           $SUBDIR" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "ADMANIF_URL1:     $ANDROID_MANIFEST_URL1"
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt 
+  echo "ADMANIF_URL2:     $ANDROID_MANIFEST_URL2"
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "ACTIVITIES:       $NEW_LIST_OF_ACTIVITIES" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "ACTIVITY_ICONS:   $LIST_OF_ACTIVITY_ICONS" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
+  echo "APPLICATION_ICON: $APPLICATION_ICON" 
+  # >> $DEST_DIR/$APP_NAME_SIMPLE/METADATA.txt
   rm $DEST_DIR/$APP_NAME_SIMPLE/AndroidManifestWithoutAndroidNS.xml
